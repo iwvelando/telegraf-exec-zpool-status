@@ -55,7 +55,7 @@ name
 
 ## Health Mapping
 
-In order to facilitate graphing I express the healt as an integer. Based on the
+In order to facilitate graphing I express the health as an integer. Based on the
 man page I identified the following states to map:
 
 | State | Integer |
