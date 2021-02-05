@@ -13,12 +13,13 @@ import (
 )
 
 var statusInt = map[string]int{
-	"ONLINE":   0,
-	"OFFLINE":  1,
-	"DEGRADED": 2,
-	"FAULTED":  3,
-	"REMOVED":  4,
-	"UNAVAIL":  5,
+	"ONLINE":    0,
+	"OFFLINE":   1,
+	"DEGRADED":  2,
+	"FAULTED":   3,
+	"REMOVED":   4,
+	"UNAVAIL":   5,
+	"SUSPENDED": 6,
 }
 
 func main() {
@@ -132,7 +133,7 @@ func main() {
 		var ok bool
 		poolHealthRaw := columns[11*i+9]
 		if poolHealth, ok = statusInt[poolHealthRaw]; !ok {
-			poolHealth = 0
+			poolHealth = 99
 		}
 		poolAltRoot := columns[11*i+10]
 
