@@ -13,10 +13,10 @@ import (
 )
 
 var statusInt = map[string]int{
-	"DEGRADED": 0,
-	"FAULTED":  1,
-	"OFFLINE":  2,
-	"ONLINE":   3,
+	"ONLINE":   0,
+	"OFFLINE":  1,
+	"DEGRADED": 2,
+	"FAULTED":  3,
 	"REMOVED":  4,
 	"UNAVAIL":  5,
 }

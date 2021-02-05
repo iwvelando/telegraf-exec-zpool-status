@@ -60,10 +60,10 @@ man page I identified the following states to map:
 
 | State | Integer |
 | --- | --- |
-| DEGRADED | 0 |
-| FAULTED | 1 |
-| OFFLINE | 2 |
-| ONLINE | 3 |
+| ONLINE | 0 |
+| OFFLINE | 1 |
+| FAULTED | 3 |
+| DEGRADED | 2 |
 | REMOVED | 4 |
 | UNAVAIL | 5 |
 
