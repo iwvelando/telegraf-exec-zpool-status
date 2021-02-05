@@ -66,8 +66,9 @@ man page I identified the following states to map:
 | DEGRADED | 2 |
 | REMOVED | 4 |
 | UNAVAIL | 5 |
+| SUSPENDED | 6 |
 
-The default value if a match isn't found is -1.
+The default value if a match isn't found is 99.
 
 # Future Work
 
