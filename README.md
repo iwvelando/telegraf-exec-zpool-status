@@ -212,6 +212,6 @@ The default value if a match isn't found is 99.
 Once https://github.com/influxdata/telegraf/pull/6724 is merged the
 `zpool -H -p` functionality would be redundant and a native telegraf plugin
 could be used. However the `zpool status -s -p` functionality is outstanding and
-could be a useful addition.
+would be a useful addition.
 
 Tests should be added especially considering the sensitivity of parsing.
