@@ -2,9 +2,9 @@
 
 This is a simple tool to extract zpool status and output [Influx line protocol](https://docs.influxdata.com/influxdb/cloud/reference/syntax/line-protocol/);
 it is designed to be used with a [telegraf exec plugin](https://github.com/influxdata/telegraf/tree/master/plugins/inputs/exec).
-This parses the output of `zpool -H -p` and `zpool status -s -p` and has been
-developed against Ubuntu 20.04 with ZFS 0.8.3 and InfluxDB 1.x for generating
-compatible line protocol.
+This parses the output of `zpool list -H -p` and `zpool status -s -p` and has
+been developed against Ubuntu 20.04 with ZFS 0.8.3 and InfluxDB 1.x for
+generating compatible line protocol.
 
 ## Reference Output
 
