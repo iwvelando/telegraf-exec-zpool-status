@@ -1,0 +1,20 @@
+Value Filldown Pool (\S+)
+Value Repair (\d+\w+)
+Value ScrubErrors (\d+)
+Value Errors (.*)
+Value Object (\S+)
+Value State (\w+)
+Value ReadErrors (\d+)
+Value WriteErrors (\d+)
+Value ChecksumErrors (\d+)
+Value SlowIOs (\d+)
+Value Notes (.*)
+
+Start
+  ^\s*pool: ${Pool}
+  ^\s*scan: scrub repaired ${Repair}.*with ${ScrubErrors} errors -> Record
+  ^\s*NAME.* 
+  ^\s*errors: ${Errors} -> Record
+  ^\s*${Object}\s+${State}\s+${ReadErrors}\s+${WriteErrors}\s+${ChecksumErrors}\s+${SlowIOs}?\s*${Notes} -> Record
+  ^$$ -> Start
+
