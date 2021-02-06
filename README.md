@@ -104,7 +104,7 @@ zpool_errors,pool=testpool333 errors="No known data errors",errors_found=0i 1612
 ```
 ## Telegraf Run Example
 
-This is a sample telegraf exec input that assumes that binary has been installed
+This is a sample telegraf exec input that assumes the binary has been installed
 to `/usr/local/bin/telegraf-input-zpool-status` and the TextFSM template to
 `/etc/telegraf/zpool_status_template.txt`:
 
