@@ -74,8 +74,9 @@ errors: No known data errors
 ## Inreractive Run Example
 
 The compiled tool can be run interactively. It assumes by default that the
-[template](./zpool_status_template.txt) is in your current directory, but that
-can be set with the `--template` CLI option.
+[TextFSM](https://github.com/google/textfsm/wiki/TextFSM) [template](./zpool_status_template.txt)
+is in your current directory, but that can be set with the `--template` CLI
+option.
 
 ```
 ./telegraf-input-zpool-status
@@ -104,8 +105,8 @@ zpool_errors,pool=testpool333 errors="No known data errors",errors_found=0i 1612
 ## Telegraf Run Example
 
 This is a sample telegraf exec input that assumes that binary has been installed
-to `/usr/local/bin/telegraf-input-zpool-status` and the [TextFSM](https://github.com/google/textfsm/wiki/TextFSM)
-template to `/etc/telegraf/zpool_status_template.txt`:
+to `/usr/local/bin/telegraf-input-zpool-status` and the TextFSM template to
+`/etc/telegraf/zpool_status_template.txt`:
 
 ```
 [[inputs.exec]]                                                                 
