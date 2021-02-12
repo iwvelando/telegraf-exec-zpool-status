@@ -1,4 +1,4 @@
-module github.com/iwvelando/telegraf-input-zpool-status
+module github.com/iwvelando/telegraf-exec-zpool-status
 
 go 1.15
 
