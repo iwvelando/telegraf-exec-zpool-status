@@ -1,4 +1,4 @@
-# telegraf-input-zpool-status
+# telegraf-exec-zpool-status
 
 This is a simple tool to extract zpool status and output [Influx line protocol](https://docs.influxdata.com/influxdb/cloud/reference/syntax/line-protocol/);
 it is designed to be used with a [telegraf exec plugin](https://github.com/influxdata/telegraf/tree/master/plugins/inputs/exec).
@@ -79,7 +79,7 @@ is in your current directory, but that can be set with the `--template` CLI
 option.
 
 ```
-./telegraf-input-zpool-status
+./telegraf-exec-zpool-status
 zpool,alternative_root=-,pool=testpool111 allocated=18467381760i,capacity=90i,checkpoint=0i,dedup=1,expand=0i,fragmentation=72i,free=1933712896i,health=6i,size=20401094656i 1612641748237439221
 zpool,alternative_root=-,pool=testpool222 allocated=18467233280i,capacity=90i,checkpoint=0i,dedup=1,expand=0i,fragmentation=68i,free=1933861376i,health=2i,size=20401094656i 1612641748237439221
 zpool,alternative_root=-,pool=testpool333 allocated=139776i,capacity=0i,checkpoint=0i,dedup=1,expand=0i,fragmentation=0i,free=10200407552i,health=0i,size=10200547328i 1612641748237439221
@@ -105,12 +105,12 @@ zpool_errors,pool=testpool333 errors="No known data errors",errors_found=0i 1612
 ## Telegraf Run Example
 
 This is a sample telegraf exec input that assumes the binary has been installed
-to `/usr/local/bin/telegraf-input-zpool-status` and the TextFSM template to
+to `/usr/local/bin/telegraf-exec-zpool-status` and the TextFSM template to
 `/etc/telegraf/zpool_status_template.txt`:
 
 ```
 [[inputs.exec]]                                                                 
-  commands = ["/usr/local/bin/telegraf-input-zpool-status --template=/etc/telegraf/zpool_status_template.txt"]
+  commands = ["/usr/local/bin/telegraf-exec-zpool-status --template=/etc/telegraf/zpool_status_template.txt"]
   timeout = "5s"                                                                
   data_format = "influx"      
 ```
