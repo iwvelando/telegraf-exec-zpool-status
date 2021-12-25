@@ -161,7 +161,8 @@ func ParseZpoolList(output []byte) error {
 				"dedup":         poolDedup,
 				"health":        poolHealth,
 			},
-			ts)
+			ts,
+		)
 		fmt.Println(influxWrite.PointToLineProtocol(data, time.Nanosecond))
 	}
 	return nil
@@ -215,7 +216,8 @@ func ParseZpoolStatus(output []byte, templatePath string) error {
 					"bytes_repaired": bytesRepaired,
 					"errors_found":   errorsFound,
 				},
-				ts)
+				ts,
+			)
 			fmt.Println(influxWrite.PointToLineProtocol(data, time.Nanosecond))
 		} else if row[3].(string) != "" {
 			poolName := row[0].(string)
@@ -237,7 +239,8 @@ func ParseZpoolStatus(output []byte, templatePath string) error {
 					"errors":       errors,
 					"errors_found": errorsFound,
 				},
-				ts)
+				ts,
+			)
 			fmt.Println(influxWrite.PointToLineProtocol(data, time.Nanosecond))
 		} else {
 			poolName := row[0].(string)
@@ -290,7 +293,8 @@ func ParseZpoolStatus(output []byte, templatePath string) error {
 					"slow_ios":        slowIO,
 					"notes":           notes,
 				},
-				ts)
+				ts,
+			)
 			fmt.Println(influxWrite.PointToLineProtocol(data, time.Nanosecond))
 		}
 	}
